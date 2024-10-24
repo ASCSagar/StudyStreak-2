@@ -34,9 +34,12 @@ const teamMembers = [
 const AboutUs = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="bg-purple-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">About STUDYSTREAK</h1>
+      <header
+        className=" text-white py-16"
+        style={{ backgroundColor: "#01579b" }}
+      >
+        <div className="container mx-auto px-4 text-start">
+          <h1 className="text-4xl font-bold mb-4">About StudyStreak</h1>
           <p className="text-xl">
             Empowering students to achieve their dreams through expert-led test
             preparation
@@ -55,7 +58,10 @@ const AboutUs = () => {
               to help students achieve their target scores and open doors to
               their dream educational institutions and careers.
             </p>
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-md hover:bg-purple-700 transition text-lg font-semibold">
+            <button
+              className="text-white px-6 py-2 rounded-md hover:bg-purple-700 transition text-lg font-semibold"
+              style={{ backgroundColor: "#01579b" }}
+            >
               Learn More About Our Approach
             </button>
           </div>
@@ -91,7 +97,9 @@ const AboutUs = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
                 <img
-                  src={member.image}
+                  src={
+                    "https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg="
+                  }
                   alt={member.name}
                   className="w-full h-48 object-cover"
                 />
@@ -114,7 +122,10 @@ const AboutUs = () => {
             Join thousands of successful students who have achieved their dreams
             with STUDYSTREAK
           </p>
-          <button className="bg-green-500 text-white px-8 py-3 rounded-md hover:bg-green-600 transition text-lg font-semibold">
+          <button
+            className="text-white px-8 py-3 rounded-md hover:bg-green-600 transition text-lg font-semibold"
+            style={{ backgroundColor: "#01579b" }}
+          >
             Explore Our Courses
           </button>
         </div>

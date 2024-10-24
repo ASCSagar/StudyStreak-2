@@ -1,15 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
-import HomePage from './components/Home/Home';
-import CoursesPage from './components/Course/Courses';
-import AboutUsPage from './components/AboutUs/AboutUs';
-import WhyChooseUsPage from './components/WhyChooseUs/WhyChooseUs';
-import BlogsPage from './components/Blog/Blogs';
-import TalkToUsPage from './components/ContactUs/ContactUs';
-import BecomeAPartnerPage from './components/BecomeApartner/BecomeAPartner';
-import CourseDetailPage from './components/Course/CourseDetail/CourseDetail';
-import LoginPage from './components/Login/Login';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import HomePage from "./components/Home/Home";
+import CoursesPage from "./components/Course/Courses";
+import AboutUsPage from "./components/AboutUs/AboutUs";
+import WhyChooseUsPage from "./components/WhyChooseUs/WhyChooseUs";
+import BlogsPage from "./components/Blog/Blogs";
+import TalkToUsPage from "./components/ContactUs/ContactUs";
+import BecomeAPartnerPage from "./components/BecomeApartner/BecomeAPartner";
+import CourseDetailPage from "./components/Course/CourseDetail/CourseDetail";
+import LoginPage from "./components/Login/Login";
+import TidioChat from "./components/ChatBot/TidioChat";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/become-a-partner" element={<BecomeAPartnerPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Routes>
+        <TidioChat />
       </Layout>
     </Router>
   );

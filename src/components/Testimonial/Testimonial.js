@@ -86,14 +86,15 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-50 to-indigo-50 overflow-hidden">
+    <section className="py-4 bg-gradient-to-r from-purple-50 to-indigo-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center text-purple-800">
+        <h2
+          className="text-3xl font-bold mb-12 text-center text-purple-800"
+          style={{ color: "#01579b" }}
+        >
           What Our Students Say
         </h2>
-        <div className="relative overflow-hidden" style={{ height: "400px" }}>
-          {" "}
-          {/* Fixed height to prevent layout shift */}
+        <div className="relative overflow-hidden" style={{ height: "200px" }}>
           <div
             ref={scrollRef}
             className="flex absolute left-0 top-0 transition-transform duration-1000 ease-linear"
@@ -109,7 +110,7 @@ const Testimonial = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg h-full flex flex-col">
                   <div className="flex items-center mb-4">
                     <img
-                      src={`/student-${(index % testimonials.length) + 1}.jpg`}
+                      src={`https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=`}
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full border-2 border-purple-500 mr-4"
                     />

@@ -131,7 +131,10 @@ const Courses = () => {
         </button>
       </div>
 
-      <header className="bg-purple-600 text-white py-16">
+      <header
+        className=" text-white py-16"
+        style={{ backgroundColor: "#01579b" }}
+      >
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Explore Our Courses</h1>
           <p className="text-xl mb-8">
@@ -161,17 +164,19 @@ const Courses = () => {
                 <button
                   key={exam}
                   className={`px-4 py-2 rounded-full ${
-                    selectedExam === exam
-                      ? "bg-purple-600 text-white"
-                      : "bg-white text-purple-600"
+                    selectedExam === exam ? "text-white" : "bg-white text-black"
                   }`}
+                  style={
+                    selectedExam === exam ? { backgroundColor: "#01579b" } : {}
+                  }
                   onClick={() => setSelectedExam(exam)}
                 >
                   {exam}
                 </button>
               ))}
             </div>
-            <button className="flex items-center space-x-2 text-purple-600">
+
+            <button className="flex items-center space-x-2">
               <Filter size={20} />
               <span>More Filters</span>
             </button>
@@ -203,7 +208,8 @@ const Courses = () => {
                     <span className="text-2xl font-bold">${course.price}</span>
                     <Link
                       to={`/course/${course.id}`}
-                      className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition"
+                      className="text-white px-4 py-2 rounded-md hover:bg-purple-700 transition"
+                      style={{ backgroundColor: "#01579b" }}
                     >
                       View Details
                     </Link>
@@ -235,7 +241,10 @@ const Courses = () => {
                     {webinar.time}
                   </span>
                 </div>
-                <button className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full">
+                <button
+                  className=" text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full"
+                  style={{ backgroundColor: "#01579b" }}
+                >
                   Register Now
                 </button>
               </div>
@@ -265,7 +274,7 @@ const Courses = () => {
                     <span>{post.date}</span>
                   </div>
                 </div>
-                <div className="bg-purple-600 p-4">
+                <div className="p-4" style={{ backgroundColor: "#01579b" }}>
                   <Link className="text-white flex items-center justify-center">
                     Read More <ArrowRight size={16} className="ml-2" />
                   </Link>
@@ -274,7 +283,10 @@ const Courses = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <button className="bg-purple-600 text-white px-6 py-3 rounded-md hover:bg-purple-700 transition">
+            <button
+              className=" text-white px-6 py-3 rounded-md hover:bg-purple-700 transition"
+              style={{ backgroundColor: "#01579b" }}
+            >
               View All Blog Posts
             </button>
           </div>

@@ -5,25 +5,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import TestimonialSection from "../Testimonial/Testimonial";
 
-const features = [
-  {
-    title: "5 Major Test Preparations",
-    description: "IELTS, GRE, GMAT, TOEFL, PTE",
-  },
-  {
-    title: "Expert Instruction",
-    description: "Learn from certified professionals",
-  },
-  {
-    title: "Guaranteed Results",
-    description: "Improve your scores or money back",
-  },
-];
-
 const examCourses = [
   {
     id: 1,
-    title: "IELTS Mastery Course",
+    title: "IELTS Tips - Test",
     icon: "ielts",
     duration: "6 weeks",
     level: "All Levels",
@@ -33,7 +18,7 @@ const examCourses = [
   },
   {
     id: 2,
-    title: "GRE Comprehensive Prep",
+    title: "IELTS Vocabulary",
     icon: "gre",
     duration: "8 weeks",
     level: "Advanced",
@@ -43,7 +28,7 @@ const examCourses = [
   },
   {
     id: 3,
-    title: "GMAT Intensive Program",
+    title: "Academic IELTS",
     icon: "gmat",
     duration: "10 weeks",
     level: "Intermediate",
@@ -53,7 +38,7 @@ const examCourses = [
   },
   {
     id: 4,
-    title: "TOEFL iBT Success Course",
+    title: "IELTS Grammar",
     icon: "toefl",
     duration: "6 weeks",
     level: "Beginner",
@@ -118,17 +103,19 @@ const upcomingWebinars = [
 const Home = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
-    
       {/* Hero Section */}
-      <section className="bg-purple-600 text-white py-16">
+      <section
+        className="text-white py-16"
+        style={{ backgroundColor: "#01579b" }}
+      >
         <div className="container mx-auto px-4 flex items-center">
           <div className="w-1/2">
             <h1 className="text-4xl font-bold mb-4">
-              Ace Your Exams with STUDYSTREAK
+              Study Towards Your Dream Destination
             </h1>
             <p className="mb-8 text-purple-200">
-              Expert-led courses for IELTS, GRE, GMAT, TOEFL, and PTE. Designed
-              for ambitious students aiming for top scores.
+              Real-Time AI Based Results , Live Online Class Access Thousands Of
+              Tests To Practice
             </p>
             <div className="space-x-4">
               <button className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition">
@@ -141,7 +128,7 @@ const Home = () => {
           </div>
           <div className="w-1/2 relative">
             <img
-              src="/api/placeholder/600/400"
+              src="https://studystreak.in/static/media/about_10.c6fba820cc5e8886a5dd.png"
               alt="Students studying"
               className="rounded-lg"
             />
@@ -154,33 +141,76 @@ const Home = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-between">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg p-6 flex items-center space-x-4 w-1/3 mx-2 shadow-sm"
-              >
-                <div className="bg-orange-100 p-3 rounded-full">
-                  <svg
-                    className="w-6 h-6 text-orange-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold">{feature.title}</h3>
-                  <p className="text-sm text-gray-600">{feature.description}</p>
-                </div>
+            <div className="bg-white rounded-lg p-6 flex items-center space-x-4 w-1/3 mx-2 shadow-sm">
+              <div className="bg-orange-100 p-3 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+                  />
+                </svg>
               </div>
-            ))}
+              <div>
+                <h3 className="font-semibold">All Major Test Preparations</h3>
+                <p className="text-sm text-gray-600">
+                  IELTS, GRE, GMAT, TOEFL, PTE
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-6 flex items-center space-x-4 w-1/3 mx-2 shadow-sm">
+              <div className="bg-orange-100 p-3 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m6.75 12H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold">Expert Instruction</h3>
+                <p className="text-sm text-gray-600">Expert Instruction</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-6 flex items-center space-x-4 w-1/3 mx-2 shadow-sm">
+              <div className="bg-orange-100 p-3 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold">Guaranteed Results</h3>
+                <p className="text-sm text-gray-600">
+                  Improve your scores or money back
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -214,9 +244,9 @@ const Home = () => {
                   } flex items-center justify-center`}
                 >
                   <img
-                    src={`/${course.icon}-icon.svg`}
+                    src={`https://blr1.vultrobjects.com/studystreak-media/media/course_thumbnails/free-study-abroad-guidance-and-counselling-in-education-m.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=8HTYA3DMIUS10Z3LMH24%2F20241024%2Fblr1%2Fs3%2Faws4_request&X-Amz-Date=20241024T123424Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=e048ac9e4eca209f333f9de2a025466b9d187cd64712948b8fb4f5162d068bef`}
                     alt={course.title}
-                    className="w-16 h-16"
+                    className="mb-2"
                   />
                 </div>
                 <div className="p-4">
@@ -259,11 +289,6 @@ const Home = () => {
                     </span>
                   </div>
                   <div className="flex items-center mb-2">
-                    <img
-                      src={`/instructor-${index + 1}.jpg`}
-                      alt={course.instructor}
-                      className="w-6 h-6 rounded-full mr-2"
-                    />
                     <span className="text-xs text-gray-600">
                       {course.instructor}
                     </span>
@@ -271,6 +296,7 @@ const Home = () => {
                   <Link
                     to={`/course/${course.id}`}
                     className="block w-full text-center bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition mt-2"
+                    style={{ backgroundColor: "#01579b" }}
                   >
                     View Details
                   </Link>
@@ -318,9 +344,9 @@ const Home = () => {
                     } flex items-center justify-center`}
                   >
                     <img
-                      src={`/${course.icon}-icon.svg`}
+                      src={`https://blr1.vultrobjects.com/studystreak-media/media/course_thumbnails/free-study-abroad-guidance-and-counselling-in-education-m.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=8HTYA3DMIUS10Z3LMH24%2F20241024%2Fblr1%2Fs3%2Faws4_request&X-Amz-Date=20241024T123424Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=e048ac9e4eca209f333f9de2a025466b9d187cd64712948b8fb4f5162d068bef`}
                       alt={course.title}
-                      className="w-16 h-16"
+                      className="mb-2"
                     />
                   </div>
                   <div className="p-4">
@@ -347,6 +373,7 @@ const Home = () => {
                     <Link
                       to={`/course/${course.id}`}
                       className="block w-full text-center bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition mt-2"
+                      style={{ backgroundColor: "#01579b" }}
                     >
                       View Details
                     </Link>
@@ -362,8 +389,8 @@ const Home = () => {
       <TestimonialSection />
 
       {/* Upcoming Webinars */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section>
+        <div className="container mx-auto px-4 p-4">
           <h2 className="text-2xl font-bold mb-8">Upcoming Free Webinars</h2>
           <div className="grid grid-cols-3 gap-6">
             {upcomingWebinars.map((webinar, index) => (
@@ -411,7 +438,10 @@ const Home = () => {
                   </svg>
                   {webinar.time}
                 </div>
-                <button className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition">
+                <button
+                  className="w-full  text-white py-2 rounded-md hover:bg-purple-700 transition"
+                  style={{ backgroundColor: "#01579b" }}
+                >
                   Register Now
                 </button>
               </div>
@@ -421,7 +451,10 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-purple-600 text-white">
+      <section
+        className="py-16 text-white"
+        style={{ backgroundColor: "#01579b" }}
+      >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Start Your Journey?
@@ -430,7 +463,10 @@ const Home = () => {
             Join thousands of students who have achieved their dream scores with
             STUDYSTREAK.
           </p>
-          <button className="bg-white text-purple-600 px-8 py-3 rounded-md hover:bg-gray-100 transition font-semibold">
+          <button
+            className="bg-white  px-8 py-3 rounded-md hover:bg-gray-100 transition font-semibold"
+            style={{ color: "#01579b" }}
+          >
             Get Started Today
           </button>
         </div>

@@ -9,6 +9,7 @@ const Layout = ({ children }) => {
     { name: "About Us", path: "/about-us" },
     { name: "Why Choose Us", path: "/why-choose-us" },
     { name: "Blogs", path: "/blogs" },
+    { name: "Podcast", path: "/podcast" },
     { name: "Talk to Us", path: "/talk-to-us" },
     { name: "Become a Partner", path: "/become-a-partner" },
   ];

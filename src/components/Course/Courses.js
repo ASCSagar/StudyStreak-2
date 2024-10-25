@@ -125,36 +125,35 @@ const Courses = () => {
   return (
     <div className="bg-gray-100 min-h-screen relative">
       {/* Sticky CTA Button */}
-      <div className="fixed bottom-8 right-8 z-50">
+      {/* <div className="fixed bottom-8 right-8 z-50">
         <button className="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition text-lg font-semibold shadow-lg">
           Take Free Assessment
         </button>
-      </div>
+      </div> */}
 
-      <header
-        className=" text-white py-16"
-        style={{ backgroundColor: "#01579b" }}
-      >
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">Explore Our Courses</h1>
-          <p className="text-xl mb-8">
-            Find the perfect course to achieve your target score
-          </p>
-          <div className="flex">
-            <div className="relative flex-grow">
-              <input
-                type="text"
-                placeholder="Search courses..."
-                className="w-full py-3 px-4 rounded-l-md text-gray-800"
-              />
-              <Search className="absolute right-3 top-3 text-gray-400" />
+      <section className="text-white py-16 bg-primary-500">
+        <div className="container mx-auto px-4 flex items-center">
+          <div className="w-1/2">
+            <h1 className="text-4xl font-bold mb-4">Explore Our Courses</h1>
+            <p className="mb-8 text-primary-200">
+              Find the perfect course to achieve your target score
+            </p>
+            <div className="flex">
+              <div className="relative flex-grow">
+                <input
+                  type="text"
+                  placeholder="Search courses..."
+                  className="w-full py-3 px-4 rounded-l-md text-gray-800"
+                />
+                <Search className="absolute right-3 top-3 text-gray-400" />
+              </div>
+              <button className="bg-secondary-500 text-white px-6 py-3 rounded-r-md hover:bg-secondary-600 transition">
+                Search
+              </button>
             </div>
-            <button className="bg-green-500 text-white px-6 py-3 rounded-r-md hover:bg-green-600 transition">
-              Search
-            </button>
           </div>
         </div>
-      </header>
+      </section>
 
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -165,10 +164,7 @@ const Courses = () => {
                   key={exam}
                   className={`px-4 py-2 rounded-full ${
                     selectedExam === exam ? "text-white" : "bg-white text-black"
-                  }`}
-                  style={
-                    selectedExam === exam ? { backgroundColor: "#01579b" } : {}
-                  }
+                  } ${selectedExam === exam ? "bg-primary-500" : ""}`}
                   onClick={() => setSelectedExam(exam)}
                 >
                   {exam}
@@ -176,7 +172,7 @@ const Courses = () => {
               ))}
             </div>
 
-            <button className="flex items-center space-x-2">
+            <button className="flex items-center space-x-2 text-primary-500">
               <Filter size={20} />
               <span>More Filters</span>
             </button>
@@ -208,8 +204,7 @@ const Courses = () => {
                     <span className="text-2xl font-bold">${course.price}</span>
                     <Link
                       to={`/course/${course.id}`}
-                      className="text-white px-4 py-2 rounded-md hover:bg-purple-700 transition"
-                      style={{ backgroundColor: "#01579b" }}
+                      className="bg-white text-primary-700 px-8 py-3 rounded-md hover:bg-gray-100 transition font-semibold"
                     >
                       View Details
                     </Link>
@@ -223,14 +218,14 @@ const Courses = () => {
 
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-3xl font-bold mb-8 text-center text-primary-700">
             Upcoming Free Webinars
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {webinars.map((webinar, index) => (
               <div
                 key={index}
-                className="bg-purple-50 rounded-lg p-6 shadow-md"
+                className="bg-primary-50 rounded-lg p-6 shadow-md"
               >
                 <h3 className="text-xl font-semibold mb-2">{webinar.title}</h3>
                 <p className="text-gray-600 mb-4">{webinar.instructor}</p>
@@ -241,10 +236,7 @@ const Courses = () => {
                     {webinar.time}
                   </span>
                 </div>
-                <button
-                  className=" text-white px-4 py-2 rounded-md hover:bg-purple-700 transition w-full"
-                  style={{ backgroundColor: "#01579b" }}
-                >
+                <button className="block w-full text-center bg-primary text-white py-2 rounded-md hover:bg-primary-dark transition mt-2">
                   Register Now
                 </button>
               </div>
@@ -257,7 +249,7 @@ const Courses = () => {
 
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-3xl font-bold mb-8 text-center text-primary-700">
             Latest from Our Blog
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -274,7 +266,7 @@ const Courses = () => {
                     <span>{post.date}</span>
                   </div>
                 </div>
-                <div className="p-4" style={{ backgroundColor: "#01579b" }}>
+                <div className="p-4 bg-primary-500">
                   <Link className="text-white flex items-center justify-center">
                     Read More <ArrowRight size={16} className="ml-2" />
                   </Link>
@@ -283,10 +275,7 @@ const Courses = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <button
-              className=" text-white px-6 py-3 rounded-md hover:bg-purple-700 transition"
-              style={{ backgroundColor: "#01579b" }}
-            >
+            <button className=" text-center bg-primary text-white py-2 rounded-md hover:bg-primary-dark transition mt-2 p-3">
               View All Blog Posts
             </button>
           </div>

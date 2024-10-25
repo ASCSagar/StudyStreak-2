@@ -101,13 +101,14 @@ const CourseDetail = () => {
   return (
     <div className="bg-gray-100 min-h-screen relative">
       {/* Floating Enroll Now Button */}
-      <div className="fixed bottom-8 right-8 z-50">
+      {/* <div className="fixed bottom-8 right-8 z-50">
         <button className="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition text-lg font-semibold shadow-lg">
           Enroll Now
         </button>
-      </div>
+      </div> */}
 
       {/* Course Banner */}
+
       <div
         className="relative h-80 bg-cover bg-center"
         style={{ backgroundImage: `url(${course.bannerImage})` }}
@@ -271,32 +272,6 @@ const CourseDetail = () => {
 
         {/* Testimonials */}
         <Testimonial />
-
-        {/* Register for Webinar */}
-        <div className="bg-purple-100 rounded-lg shadow-md p-6 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            Register for Free Webinar
-          </h2>
-          <p className="mb-4">
-            Join our free webinar to learn more about IELTS preparation
-            strategies and tips.
-          </p>
-          <form className="flex flex-col md:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="flex-grow px-4 py-2 rounded-md"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="flex-grow px-4 py-2 rounded-md"
-            />
-            <button className="bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700 transition">
-              Register Now
-            </button>
-          </form>
-        </div>
       </div>
     </div>
   );

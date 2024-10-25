@@ -11,6 +11,8 @@ import BecomeAPartnerPage from "./components/BecomeApartner/BecomeAPartner";
 import CourseDetailPage from "./components/Course/CourseDetail/CourseDetail";
 import LoginPage from "./components/Login/Login";
 import TidioChat from "./components/ChatBot/TidioChat";
+import Register from "./components/Login/Register";
+import Lesson from "./components/Lesson/Lesson";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/talk-to-us" element={<TalkToUsPage />} />
           <Route path="/become-a-partner" element={<BecomeAPartnerPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/lesson" element={<Lesson />} />
         </Routes>
         <TidioChat />
       </Layout>
